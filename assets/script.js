@@ -65,10 +65,11 @@ function clickGauche() {
 		img.setAttribute("src", "./assets/images/slideshow/" + slides[currentSlide]["image"]);
 		tagline.innerHTML = slides[currentSlide]["tagLine"];
 		dot = document.getElementById(currentSlide);
-		dot.classList.add("dot_selected");
+		dot.classList.add("dot_selected"); //just the add isn't right
 		previousDot = document.getElementById(0);
 		previousDot.classList.remove("dot_selected");
-	}else{
+	}
+	else{
 		//otherwise slide +1 and dot+1
 		currentSlide--;
 		img.setAttribute("src", "./assets/images/slideshow/" + slides[currentSlide]["image"]);
@@ -77,7 +78,6 @@ function clickGauche() {
 		dot.classList.add("dot_selected");
 		previousDot = document.getElementById(currentSlide +1);
 		previousDot.classList.remove("dot_selected");
-		console.log(previousDot);
 	}
 }
 //and the event listener
